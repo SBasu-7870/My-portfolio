@@ -1,6 +1,30 @@
+'use client';
+import React from 'react'
 import Image from 'next/image'
+import Projects from './Projects'
+import About from './About';
 
 export default function Home() {
+  const [page,setPage] = React.useState('projects');
+
+  const handleTabChange = (event: React.MouseEvent<HTMLButtonElement>) => {
+     const pageName = event.currentTarget.dataset.tab;
+     if(pageName){
+        setPage(pageName);
+     }   
+  }
+
+  const renderComponent =() =>{
+    switch(page){
+      case 'projects':
+        return <Projects/>
+      case 'about':
+        return <About/>
+      default:
+        return null;
+    }
+  }
+
   return (
     <main className="flex min-h-screen flex-row items-center justify-center p-10">
       <div className='w-2/5 h-screen border-2 border-white border-solid'>
@@ -36,11 +60,12 @@ export default function Home() {
           <p>FullStack Developer. IEMK&apos;23</p>
         </div>
         <div className='flex justify-around mt-10'>
-          <span className='hover:border-b-2 hover:border-white'>Projects</span>
-          <span className='hover:border-b-2 hover:border-white'>About</span>
-          <span className='hover:border-b-2 hover:border-white'>Links</span>
-          <span className='hover:border-b-2 hover:border-white'>Contact</span>
+          <button className='hover:border-b-2 hover:border-white' data-tab="projects" onClick={handleTabChange}>Projects</button>
+          <button className='hover:border-b-2 hover:border-white' data-tab="about" onClick={handleTabChange}>About</button>
+          <button className='hover:border-b-2 hover:border-white'>Links</button>
+          <button className='hover:border-b-2 hover:border-white'>Contact</button>
         </div>
+        {renderComponent()}
       </div>
     </main>
   )
