@@ -1,8 +1,9 @@
 'use client';
 import React from 'react'
 import Image from 'next/image'
-import Projects from './Projects'
-import About from './About';
+import Projects from './components/Projects'
+import About from './components/About';
+import Links from './Links';
 
 export default function Home() {
   const [page,setPage] = React.useState('projects');
@@ -20,13 +21,15 @@ export default function Home() {
         return <Projects/>
       case 'about':
         return <About/>
+      case 'links':
+        return <Links/>
       default:
         return null;
     }
   }
 
   return (
-    <main className="flex min-h-screen flex-row items-center justify-center p-10">
+    <main className="flex min-h-screen flex-row items-center justify-center md:p-10">
       <div className='w-2/5 h-screen border-2 border-white border-solid'>
         <div className='w-full h-3/5'>
         <Image
@@ -59,11 +62,11 @@ export default function Home() {
           <p>I like building interesting things 🚀</p>
           <p>FullStack Developer. IEMK&apos;23</p>
         </div>
-        <div className='flex justify-around mt-10'>
-          <button className='hover:border-b-2 hover:border-white' data-tab="projects" onClick={handleTabChange}>Projects</button>
-          <button className='hover:border-b-2 hover:border-white' data-tab="about" onClick={handleTabChange}>About</button>
-          <button className='hover:border-b-2 hover:border-white'>Links</button>
-          <button className='hover:border-b-2 hover:border-white'>Contact</button>
+        <div className='flex justify-around mt-10 mb-5'>
+          <button className='border-b-2 border-backG hover:border-white' data-tab="projects" onClick={handleTabChange}>Projects</button>
+          <button className='border-b-2 border-backG hover:border-white' data-tab="about" onClick={handleTabChange}>About</button>
+          <button className='border-b-2 border-backG hover:border-white' data-tab="links" onClick={handleTabChange}>Links</button>
+          <button className='border-b-2 border-backG hover:border-white'>Contact</button>
         </div>
         {renderComponent()}
       </div>
