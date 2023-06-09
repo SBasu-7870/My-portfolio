@@ -29,9 +29,9 @@ export default function Home() {
   }
 
   return (
-    <main className="flex min-h-screen flex-row items-center justify-center md:p-10">
-      <div className='w-2/5 h-screen border-2 border-white border-solid'>
-        <div className='w-full h-3/5'>
+    <main className="flex flex-row items-center justify-center md:p-10">
+      <div className='w-full md:w-2/5 h-full md:h-screen border-2 border-white border-solid'>
+        <div className='w-full h-auto md:h-3/5'>
         <Image
          src="/Background.jpg"
          width={528}
@@ -40,7 +40,7 @@ export default function Home() {
         />
         </div>
         <div className='flex justify-between'>
-        <div className='profile ml-10 border-2 border-black -translate-y-20'>
+        <div className='profile ml-10 border-2 border-black -translate-y-11 md:-translate-y-20'>
            <Image
            src='/Profile.jpg'
            width={100}

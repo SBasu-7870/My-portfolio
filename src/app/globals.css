@@ -23,9 +23,25 @@
   margin-bottom: 2rem;
 }
 
+
+
 .project-img:hover {
   transform: scaleX(1.1);
   transform: scaleY(1.05);
   transform: translateY(-10px);
   cursor: pointer;
+}
+
+
+
+@media (max-width: 767px) {
+  .project-img {
+    margin:0 0 2rem 1.87rem;
+    width:370px; 
+  }
+
+  .github-stats{
+    width: 250px;
+    margin: 0 11.5rem 0 0;
+  }
 }
