@@ -12,7 +12,7 @@ export default function About() {
 
             <div className="mt-10">
                <h1 className="text-xl">Education</h1>
-               <div className="flex flex-col items-start ml-10 mt-5 p-5 bg-gray-700 rounded-md">
+               <div className="flex flex-col items-start ml-5 md:ml-10 mt-5 p-5 bg-gray-700 rounded-md">
                 <span>Institute of Engineering And Management Kolkata</span>
                 <span>B.Tech in Information Technology</span>
                 <span>2019-2023</span>
