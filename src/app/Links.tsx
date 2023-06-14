@@ -3,6 +3,7 @@ import LeetcodeComponent from "./components/LeetcodeComponent";
 import GithubComponent from './components/GithubComponent';
 import Image from 'next/image';
 import LinkedInComponent from './components/LinkedInComponent';
+import { motion } from "framer-motion";
 
 
 type Data ={
@@ -43,10 +44,10 @@ export default function Links() {
 
   
   return (
-    <div>
+    <motion.div animate={{x: 5}}>
       <LeetcodeComponent data={data}/>
       <GithubComponent/>
       <LinkedInComponent/>
-    </div>
+    </motion.div>
   );
 }

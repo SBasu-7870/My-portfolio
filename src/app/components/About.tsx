@@ -1,8 +1,8 @@
-
+import { motion } from "framer-motion";
 
 export default function About() {
     return(
-        <div className="flex flex-col items-start w-full p-4 border-2 border-white hover:bg-gray-900">
+        <motion.div animate={{x: 5}} className="flex flex-col items-start w-full p-4 hover:bg-gray-900">
             <h1 className="text-2xl">Hi! 👋 I&apos;m Subhrodeep Basu</h1>
             <p className="mt-5">I&apos;m a 2023 gradute in Bachelor&apos;s in Information Technology.</p>
             <p>I am a developer who likes around playing with all things web.</p>
@@ -19,6 +19,6 @@ export default function About() {
                 <span>CGPA:- 9.22</span>
                </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
