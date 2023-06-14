@@ -1,8 +1,9 @@
 import Image from 'next/image'
+import { motion } from "framer-motion";
 
 export default function Projects() {
     return(
-      <div className='w-full hover:bg-gray-900'>
+      <motion.div animate={{x: 5}} className='w-full hover:bg-gray-900'>
         <div className='flex mt-5 text-white'>
            <Image
            src='/Profile.jpg'
@@ -13,7 +14,7 @@ export default function Projects() {
           /> 
           <div className='flex flex-col justify-start ml-5'>
           <p className='mr-3'>Subhrodeep Basu</p>
-          <p className='bg-slate-500 rounded-2xl  px-3'>🚀 Feeling Experimental</p>
+          <p className='bg-orange-500 rounded-2xl  px-3'>🚀 Feeling Experimental</p>
           </div>
         </div>
         <div className='mt-5 pl-5 md:ml-10 md:pl-10 mb-4 pr-2'>
@@ -29,6 +30,6 @@ export default function Projects() {
         alt="project-1"
         />
         </a> 
-      </div>  
+      </motion.div>  
     )
 }
